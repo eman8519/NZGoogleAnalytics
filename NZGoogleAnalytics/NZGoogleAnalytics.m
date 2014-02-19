@@ -31,18 +31,15 @@
     
     [super load];
     [self setup];
-    
-    NSString *trackingId = @"";
-    
-#ifdef NZ_GA_TRACKINGID
-    trackingId = @NZ_GA_TRACKINGID;
-#endif
-    
-    [[GAI sharedInstance] trackerWithTrackingId:trackingId];
 }
 
 #pragma mark -
 #pragma mark - Public methods
+
++ (void)setTrackingId:(NSString *)trackingId
+{
+    [[GAI sharedInstance] trackerWithTrackingId:trackingId];
+}
 
 + (BOOL)trackUncaughtExceptions
 {
@@ -79,7 +76,6 @@
 
 + (void)setup
 {
-    [[NSBundle mainBundle] saveInitialShortVersion];
     [NZBundle setupShortVersion];
 
     self.trackUncaughtExceptions = YES;

@@ -7,11 +7,14 @@
 //
 
 #import "NZAppDelegate.h"
+#import "NZGoogleAnalytics.h"
 
 @implementation NZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [NZGoogleAnalytics setTrackingId:@"UA-36775180-7"];
+    
     // Override point for customization after application launch.
     return YES;
 }

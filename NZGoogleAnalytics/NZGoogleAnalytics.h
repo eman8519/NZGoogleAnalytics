@@ -9,14 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "GAI.h"
 
-#ifndef NZ_GA_TRACKINGID
-#pragma message("Sets the NZ_GA_TRACKINGID at 'Prefix.pch' to configure Google Analytics Tracking ID.")
-#endif
-
 @interface NZGoogleAnalytics : NSObject
 
 - (instancetype) init
 __attribute__((unavailable("[-init] is not allowed")));
+
++ (void)setTrackingId:(NSString *)trackingId;
 
 + (BOOL)trackUncaughtExceptions;
 + (void)setTrackUncaughtExceptions:(BOOL)trackUncaughtExceptions;
