@@ -25,7 +25,7 @@ NZGoogleAnalytics uses [Google Analytics SDK for iOS](https://developers.google.
 * Add a pod entry for NZGoogleAnalytics to your Podfile:
 
 ```
-pod 'NZGoogleAnalytics', '~> 0.0.1'
+pod 'NZGoogleAnalytics'
 ```
 
 * Install the pod(s) by running:
@@ -62,11 +62,21 @@ Alternatively you can directly add source files to your project.
 
 ## Usage
 
-* You will need to define `NZ_GA_TRACKINGID` at your project prefix header `*-Prefix.pch`:
+* Configure your `trackingID`:
 
 ```objective-c
-// define your Google Analytics Tracking ID
-#define NZ_GA_TRACKINGID "UA-000000-01"
+...
+#import "NZGoogleAnalytics.h"
+
+@implementation NZAppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [NZGoogleAnalytics setTrackingId:@"UA-000000-01"];
+    return YES;
+}
+
+@end
 ```
 
 * The NZGoogleAnalytics overrides the `+(void)load;` method of NSObject class, which is called every time the application starts.
