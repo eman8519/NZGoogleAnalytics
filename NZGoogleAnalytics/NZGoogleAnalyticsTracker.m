@@ -60,7 +60,14 @@ static NSString* const kResourceName = @"NZGoogleAnalytics-Tracker";
 
 + (void)trackEventWithCategory:(NSString *)categoty action:(NSString *)action label:(NSString *)label value:(NSNumber *)value
 {
+    [self trackEventWithCategory:categoty action:action label:label value:value nonInteraction:NO];
+}
+
++ (void)trackEventWithCategory:(NSString *)categoty action:(NSString *)action label:(NSString *)label value:(NSNumber *)value nonInteraction:(BOOL)nonInteraction
+{
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
+    [tracker set:kGAINonInteraction value:(nonInteraction) ? @"true" : @"false"];
     [tracker send:[[GAIDictionaryBuilder createEventWithCategory:categoty
                                                           action:action
                                                            label:label

@@ -36,6 +36,12 @@
                          label:(NSString *)label
                          value:(NSNumber *)value;
 
++ (void)trackEventWithCategory:(NSString *)categoty
+                        action:(NSString *)action
+                         label:(NSString *)label
+                         value:(NSNumber *)value
+                nonInteraction:(BOOL)nonInteraction;
+
 + (void)trackViewWithController:(UIViewController *)controller;
 
 + (void)trackViewWithController:(UIViewController *)controller

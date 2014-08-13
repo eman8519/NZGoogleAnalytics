@@ -30,10 +30,13 @@
 
 - (void)sendEventClicked
 {
-    //NSNumber *value = [NSNumber numberWithInt:1];
+    NSNumber *value = [NSNumber numberWithInt:1];
+    
     //[NZGoogleAnalyticsTracker trackEventWithCategory:@"category" action:@"action" label:@"label" value:value];
     
-    [NZGoogleAnalyticsTracker trackEventWithCategory:@"category1" action:@"action" label:@"label"];
+    //[NZGoogleAnalyticsTracker trackEventWithCategory:@"category1" action:@"action" label:@"label"];
+    
+    [NZGoogleAnalyticsTracker trackEventWithCategory:@"category3" action:@"action" label:@"label" value:value];
 }
 
 @end
