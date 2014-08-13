@@ -52,6 +52,21 @@ static NSString* const kResourceName = @"NZGoogleAnalytics-Tracker";
 #pragma mark -
 #pragma mark - Public methods
 
++ (void)trackEventWithCategory:(NSString *)categoty action:(NSString *)action label:(NSString *)label
+{
+    NSNumber *value = [NSNumber numberWithInt:1];
+    [self trackEventWithCategory:categoty action:action label:label value:value];
+}
+
++ (void)trackEventWithCategory:(NSString *)categoty action:(NSString *)action label:(NSString *)label value:(NSNumber *)value
+{
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:categoty
+                                                          action:action
+                                                           label:label
+                                                           value:value] build]];
+}
+
 + (void)trackViewWithController:(UIViewController *)controller
 {
     [self trackViewWithController:controller withIdentifier:nil];

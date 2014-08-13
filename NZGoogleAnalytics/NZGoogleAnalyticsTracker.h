@@ -27,6 +27,15 @@
 
 @interface NZGoogleAnalyticsTracker : NSObject
 
++ (void)trackEventWithCategory:(NSString *)categoty
+                        action:(NSString *)action
+                         label:(NSString *)label;
+
++ (void)trackEventWithCategory:(NSString *)categoty
+                        action:(NSString *)action
+                         label:(NSString *)label
+                         value:(NSNumber *)value;
+
 + (void)trackViewWithController:(UIViewController *)controller;
 
 + (void)trackViewWithController:(UIViewController *)controller

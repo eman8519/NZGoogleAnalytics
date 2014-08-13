@@ -13,7 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [NZGoogleAnalytics setTrackingId:@"UA-36775180-7"];
+    [NZGoogleAnalytics setTrackingId:@"<ABC>"];
     
     // Override point for customization after application launch.
     return YES;
