@@ -131,6 +131,18 @@ GAILogLevel logLevel = [NZGoogleAnalytics logLevel];
     [super viewDidAppear:animated];
     [NZGoogleAnalyticsTracker trackViewWithController:self withIdentifier:@"id_001"];
 }
+
+- (IBOutlet)buttonClicked
+{
+    [NZGoogleAnalyticsTracker trackEventWithCategory:@"category1" action:@"action1" label:@"label1"];
+    
+    NSNumber *value = [NSNumber numberWithInt:2];
+    [NZGoogleAnalyticsTracker trackEventWithCategory:@"category2" action:@"action2" label:@"label2" value:value];
+    
+    [NZGoogleAnalyticsTracker trackEventWithCategory:@"category3" action:@"action3" label:@"label3" value:value];
+    
+    [NZGoogleAnalyticsTracker trackEventWithCategory:@"category4" action:@"action4" label:@"label4" value:value nonInteraction:YES];
+}
 ```
 
 ## License
