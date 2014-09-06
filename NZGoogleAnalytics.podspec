@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'NZGoogleAnalytics'
-  s.version = '0.0.3'
+  s.version = '0.0.5'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'Quickly and easily integration with Google Analytics API for iOS.'
   s.homepage = 'https://github.com/NZN/NZGoogleAnalytics'
