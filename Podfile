@@ -1,2 +1,4 @@
-pod 'GoogleAnalytics-iOS-SDK', '3.0.3'
-pod 'NZBundle', '~> 0.0.3'
+source 'https://github.com/CocoaPods/Specs.git'
+
+pod 'GoogleAnalytics-iOS-SDK'
+pod 'NZBundle'
