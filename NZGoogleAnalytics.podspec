@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'NZGoogleAnalytics'
-  s.version = '0.0.7'
+  s.version = '0.0.8'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'Quickly and easily integration with Google Analytics API for iOS.'
   s.homepage = 'https://github.com/NZN/NZGoogleAnalytics'
@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
   s.dependency 'GoogleAnalytics-iOS-SDK'
   s.dependency 'NZBundle'
   s.source_files = 'NZGoogleAnalytics/*.{h,m}'
-  s.source = { :git => 'https://github.com/NZN/NZGoogleAnalytics.git', :tag => '0.0.7' }
+  s.source = { :git => 'https://github.com/NZN/NZGoogleAnalytics.git', :tag => '0.0.8' }
 end
