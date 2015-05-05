@@ -96,7 +96,7 @@ static NSString* const kResourceName = @"NZGoogleAnalytics-Tracker";
         }
         
         [tracker set:kGAIScreenName value:string];
-        [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+        [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
     } else {
 #ifdef NZDEBUG
         NSLog(@"%s nil tracker name for controller: %@",
